@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
-/* 🎨 Tema "Cosmos Sombrio" */
+/* Theme "Cosmos Sombrio" */
 :root {
-  /* Cores principais do tema */
-  --cosmos-black: #0a0a0a; /* Preto profundo do cosmos */
-  --cosmos-purple: #2e1a47; /* Roxo profundo elegante */
-  --cosmos-navy: #0d1b2a; /* Azul marinho profundo */
-  --cosmos-blue: #1b3b6f; /* Azul profundo clássico */
-  --cosmos-red: #8b0000; /* Vermelho escuro elegante */
-  --cosmos-silver: #b0b0b0; /* Prata clássica */
+  /* Main theme colors */
+  --cosmos-black: #0a0a0a; /* Deep cosmic black */
+  --cosmos-purple: #2e1a47; /* Deep elegant purple */
+  --cosmos-navy: #0d1b2a; /* Deep navy blue */
+  --cosmos-blue: #1b3b6f; /* Classic deep blue */
+  --cosmos-red: #8b0000; /* Elegant dark red */
+  --cosmos-silver: #b0b0b0; /* Classic silver */
 
-  /* Mapeamento semântico para o tema */
+  /* Semantic mapping for theme */
   --background: var(--cosmos-black);
   --foreground: var(--cosmos-silver);
   --primary: var(--cosmos-purple);
@@ -19,7 +19,7 @@
   --danger: var(--cosmos-red);
   --muted: var(--cosmos-silver);
 
-  /* Gradientes clássicos */
+  /* Classic gradients */
   --gradient-cosmos: linear-gradient(
     135deg,
     var(--cosmos-purple),
@@ -38,7 +38,7 @@
 }
 
 @theme inline {
-  /* Cores base */
+  /* Base colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -47,7 +47,7 @@
   --color-danger: var(--danger);
   --color-muted: var(--muted);
 
-  /* Cores específicas do tema */
+  /* Theme specific colors */
   --color-cosmos-black: var(--cosmos-black);
   --color-cosmos-purple: var(--cosmos-purple);
   --color-cosmos-navy: var(--cosmos-navy);
@@ -55,17 +55,62 @@
   --color-cosmos-red: var(--cosmos-red);
   --color-cosmos-silver: var(--cosmos-silver);
 
-  /* Fontes */
+  /* Fonts */
+  --font-title: "Orbitron", "Arial Black", sans-serif;
+  --font-text: "Merriweather Sans", "Georgia", serif;
+  --font-ui: "Merriweather Sans", "Georgia", serif;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Gradientes */
+  /* Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+
+  /* Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Line height */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* Gradients */
   --gradient-cosmos: var(--gradient-cosmos);
   --gradient-elegant: var(--gradient-elegant);
   --gradient-deep: var(--gradient-deep);
 }
 
-/* Tema claro (opcional - para contraste) */
+/* Light theme */
 @media (prefers-color-scheme: light) {
   :root {
     --background: var(--cosmos-silver);
@@ -76,15 +121,15 @@
   }
 }
 
-/* Estilos base do tema */
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  font-family: var(--font-text), "Inter", system-ui, sans-serif;
   min-height: 100vh;
 }
 
-/* Classes utilitárias personalizadas para o tema */
+/* Gradients */
 .cosmos-gradient {
   background: var(--gradient-cosmos);
 }
@@ -97,7 +142,7 @@ body {
   background: var(--gradient-deep);
 }
 
-/* Efeitos elegantes */
+/* Effects */
 .elegant-glow {
   box-shadow: 0 0 20px rgba(46, 26, 71, 0.4);
 }
@@ -109,4 +154,80 @@ body {
 
 .classic-shadow {
   box-shadow: 0 4px 20px rgba(10, 10, 10, 0.5);
+}
+
+/* Typography */
+.text-title {
+  font-family: var(--font-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-shadow: 0 0 15px rgba(46, 26, 71, 0.4);
+}
+
+.text-text {
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-ui {
+  font-family: var(--font-ui);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Sizes */
+.text-hero {
+  font-size: var(--font-size-8xl);
+  line-height: var(--line-height-none);
+  font-weight: var(--font-weight-black);
+}
+
+.text-display {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-extrabold);
+}
+
+.text-heading {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-subheading {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+}
+
+.text-caption {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-light);
+}
+
+/* Special effects */
+.tech-glow {
+  box-shadow: 0 0 20px rgba(58, 80, 107, 0.4);
+}
+
+.energy-border {
+  border: 1px solid var(--cosmos-blue);
+  box-shadow: 0 0 15px rgba(58, 80, 107, 0.3);
+}
+
+.neon-glow {
+  box-shadow: 0 0 25px rgba(255, 49, 49, 0.5);
+}
+
+.cyber-shadow {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(58, 80, 107, 0.2);
 }
