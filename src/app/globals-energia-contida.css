@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* 🎨 Tema "Energia Contida"*/
+:root {
+  /* Cores principais do tema */
+  --energy-black: #000000; /* Preto absoluto futurista */
+  --energy-dark: #0b132b; /* Azul escuro profundo */
+  --energy-navy: #1c2541; /* Azul marinho tecnológico */
+  --energy-blue: #3a506b; /* Azul frio tecnológico */
+  --energy-red: #ff3131; /* Vermelho energético vibrante */
+  --energy-gray: #9ca3af; /* Cinza tecnológico */
+
+  /* Mapeamento semântico para o tema */
+  --background: var(--energy-black);
+  --foreground: var(--energy-gray);
+  --primary: var(--energy-dark);
+  --secondary: var(--energy-navy);
+  --accent: var(--energy-blue);
+  --danger: var(--energy-red);
+  --muted: var(--energy-gray);
+
+  /* Gradientes futuristas */
+  --gradient-energy: linear-gradient(
+    135deg,
+    var(--energy-dark),
+    var(--energy-navy)
+  );
+  --gradient-tech: linear-gradient(
+    45deg,
+    var(--energy-navy),
+    var(--energy-blue)
+  );
+  --gradient-futuristic: linear-gradient(
+    180deg,
+    var(--energy-black),
+    var(--energy-dark)
+  );
+  --gradient-energetic: linear-gradient(
+    90deg,
+    var(--energy-blue),
+    var(--energy-red)
+  );
+}
+
+@theme inline {
+  /* Cores base */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-muted: var(--muted);
+
+  /* Cores específicas do tema */
+  --color-energy-black: var(--energy-black);
+  --color-energy-dark: var(--energy-dark);
+  --color-energy-navy: var(--energy-navy);
+  --color-energy-blue: var(--energy-blue);
+  --color-energy-red: var(--energy-red);
+  --color-energy-gray: var(--energy-gray);
+
+  /* Fontes */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Gradientes */
+  --gradient-energy: var(--gradient-energy);
+  --gradient-tech: var(--gradient-tech);
+  --gradient-futuristic: var(--gradient-futuristic);
+  --gradient-energetic: var(--gradient-energetic);
+}
+
+/* Tema claro (opcional - para contraste) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--energy-gray);
+    --foreground: var(--energy-black);
+    --primary: var(--energy-blue);
+    --secondary: var(--energy-navy);
+    --accent: var(--energy-dark);
+  }
+}
+
+/* Estilos base do tema */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Classes utilitárias personalizadas para o tema */
+.energy-gradient {
+  background: var(--gradient-energy);
+}
+
+.tech-gradient {
+  background: var(--gradient-tech);
+}
+
+.futuristic-gradient {
+  background: var(--gradient-futuristic);
+}
+
+.energetic-gradient {
+  background: var(--gradient-energetic);
+}
+
+/* Efeitos futuristas */
+.tech-glow {
+  box-shadow: 0 0 20px rgba(58, 80, 107, 0.4);
+}
+
+.energy-border {
+  border: 1px solid var(--energy-blue);
+  box-shadow: 0 0 15px rgba(58, 80, 107, 0.3);
+}
+
+.neon-glow {
+  box-shadow: 0 0 25px rgba(255, 49, 49, 0.5);
+}
+
+.cyber-shadow {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(58, 80, 107, 0.2);
+}

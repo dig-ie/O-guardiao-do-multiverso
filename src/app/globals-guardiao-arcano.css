@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* 🎨 Tema "Guardião Arcano" */
+:root {
+  /* Cores principais do tema */
+  --arcane-black: #050505; /* Preto místico profundo */
+  --arcane-purple: #3d2c5d; /* Roxo denso e místico */
+  --arcane-blue: #1e2a78; /* Azul etéreo profundo */
+  --arcane-light-blue: #2e5aac; /* Azul etéreo claro */
+  --arcane-red: #7a1c1c; /* Vermelho místico */
+  --arcane-silver: #c4c4c4; /* Prata etérea */
+
+  /* Mapeamento semântico para o tema */
+  --background: var(--arcane-black);
+  --foreground: var(--arcane-silver);
+  --primary: var(--arcane-purple);
+  --secondary: var(--arcane-blue);
+  --accent: var(--arcane-light-blue);
+  --danger: var(--arcane-red);
+  --muted: var(--arcane-silver);
+
+  /* Gradientes místicos */
+  --gradient-arcane: linear-gradient(
+    135deg,
+    var(--arcane-purple),
+    var(--arcane-blue)
+  );
+  --gradient-ethereal: linear-gradient(
+    45deg,
+    var(--arcane-blue),
+    var(--arcane-light-blue)
+  );
+  --gradient-mystic: linear-gradient(
+    180deg,
+    var(--arcane-black),
+    var(--arcane-purple)
+  );
+}
+
+@theme inline {
+  /* Cores base */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-muted: var(--muted);
+
+  /* Cores específicas do tema */
+  --color-arcane-black: var(--arcane-black);
+  --color-arcane-purple: var(--arcane-purple);
+  --color-arcane-blue: var(--arcane-blue);
+  --color-arcane-light-blue: var(--arcane-light-blue);
+  --color-arcane-red: var(--arcane-red);
+  --color-arcane-silver: var(--arcane-silver);
+
+  /* Fontes */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Gradientes */
+  --gradient-arcane: var(--gradient-arcane);
+  --gradient-ethereal: var(--gradient-ethereal);
+  --gradient-mystic: var(--gradient-mystic);
+}
+
+/* Tema claro (opcional - para contraste) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--arcane-silver);
+    --foreground: var(--arcane-black);
+    --primary: var(--arcane-light-blue);
+    --secondary: var(--arcane-blue);
+    --accent: var(--arcane-purple);
+  }
+}
+
+/* Estilos base do tema */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Classes utilitárias personalizadas para o tema */
+.arcane-gradient {
+  background: var(--gradient-arcane);
+}
+
+.ethereal-gradient {
+  background: var(--gradient-ethereal);
+}
+
+.mystic-gradient {
+  background: var(--gradient-mystic);
+}
+
+/* Efeitos místicos */
+.mystic-glow {
+  box-shadow: 0 0 20px rgba(61, 44, 93, 0.3);
+}
+
+.ethereal-border {
+  border: 1px solid var(--arcane-light-blue);
+  box-shadow: 0 0 10px rgba(46, 90, 172, 0.2);
+}

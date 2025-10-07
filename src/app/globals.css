@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* 🎨 Tema "Cosmos Sombrio" */
+:root {
+  /* Cores principais do tema */
+  --cosmos-black: #0a0a0a; /* Preto profundo do cosmos */
+  --cosmos-purple: #2e1a47; /* Roxo profundo elegante */
+  --cosmos-navy: #0d1b2a; /* Azul marinho profundo */
+  --cosmos-blue: #1b3b6f; /* Azul profundo clássico */
+  --cosmos-red: #8b0000; /* Vermelho escuro elegante */
+  --cosmos-silver: #b0b0b0; /* Prata clássica */
+
+  /* Mapeamento semântico para o tema */
+  --background: var(--cosmos-black);
+  --foreground: var(--cosmos-silver);
+  --primary: var(--cosmos-purple);
+  --secondary: var(--cosmos-navy);
+  --accent: var(--cosmos-blue);
+  --danger: var(--cosmos-red);
+  --muted: var(--cosmos-silver);
+
+  /* Gradientes clássicos */
+  --gradient-cosmos: linear-gradient(
+    135deg,
+    var(--cosmos-purple),
+    var(--cosmos-navy)
+  );
+  --gradient-elegant: linear-gradient(
+    45deg,
+    var(--cosmos-navy),
+    var(--cosmos-blue)
+  );
+  --gradient-deep: linear-gradient(
+    180deg,
+    var(--cosmos-black),
+    var(--cosmos-purple)
+  );
+}
+
+@theme inline {
+  /* Cores base */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-muted: var(--muted);
+
+  /* Cores específicas do tema */
+  --color-cosmos-black: var(--cosmos-black);
+  --color-cosmos-purple: var(--cosmos-purple);
+  --color-cosmos-navy: var(--cosmos-navy);
+  --color-cosmos-blue: var(--cosmos-blue);
+  --color-cosmos-red: var(--cosmos-red);
+  --color-cosmos-silver: var(--cosmos-silver);
+
+  /* Fontes */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Gradientes */
+  --gradient-cosmos: var(--gradient-cosmos);
+  --gradient-elegant: var(--gradient-elegant);
+  --gradient-deep: var(--gradient-deep);
+}
+
+/* Tema claro (opcional - para contraste) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--cosmos-silver);
+    --foreground: var(--cosmos-black);
+    --primary: var(--cosmos-blue);
+    --secondary: var(--cosmos-navy);
+    --accent: var(--cosmos-purple);
+  }
+}
+
+/* Estilos base do tema */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Classes utilitárias personalizadas para o tema */
+.cosmos-gradient {
+  background: var(--gradient-cosmos);
+}
+
+.elegant-gradient {
+  background: var(--gradient-elegant);
+}
+
+.deep-gradient {
+  background: var(--gradient-deep);
+}
+
+/* Efeitos elegantes */
+.elegant-glow {
+  box-shadow: 0 0 20px rgba(46, 26, 71, 0.4);
+}
+
+.cosmic-border {
+  border: 1px solid var(--cosmos-blue);
+  box-shadow: 0 0 10px rgba(27, 59, 111, 0.3);
+}
+
+.classic-shadow {
+  box-shadow: 0 4px 20px rgba(10, 10, 10, 0.5);
+}
